@@ -20,10 +20,7 @@ class phabricator::install {
   }
 
   php::extension {
-    'apcu':
-      package_prefix => 'php-';
-
-    ['curl', 'gd', 'mbstring']: ;
+    ['apcu', 'curl', 'gd', 'mbstring']: ;
 
     'mysql':
       so_name => 'mysqli';
