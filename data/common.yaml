@@ -21,6 +21,7 @@ phabricator::storage_upgrade_user: null
 phabricator::vcs_user: 'diffusion'
 phabricator::aphlict::peers: []
 phabricator::aphlict::user: 'aphlict'
+phabricator::aphlict::ws_version: 'present'
 phabricator::daemons::daemon: null
 
 # Default servers for Aphlict configuration. This has been copied from

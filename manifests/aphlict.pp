@@ -30,6 +30,7 @@ class phabricator::aphlict(
   ],
   Array[Phabricator::Aphlict::Peer] $peers = [],
   String $user = 'aphlict',
+  String $ws_version = 'present',
 ) {
   $config = {
     servers => $servers,
@@ -68,7 +69,7 @@ class phabricator::aphlict(
   include nodejs
 
   nodejs::npm { 'ws':
-    ensure  => 'present',
+    ensure  => $ws_version,
     target  => "${phabricator::install_dir}/phabricator/support/aphlict/server",
     notify  => Service['aphlict'],
     require => Vcsrepo['phabricator'],
